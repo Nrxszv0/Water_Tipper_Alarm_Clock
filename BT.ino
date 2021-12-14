@@ -94,7 +94,7 @@ void loop() {
       timeIncoming += SerialBT.read();
     }
     alarmSeconds = incomingToSeconds(timeIncoming);
-    secondsElapsed += currTime;
+    secondsElapsed += currTime;// I think this needs to be changed. It should be += milis()/1000; I think this is what was creating the delay.
   }
   else if(incoming.equals(resetAlarm)){
     alarmSeconds = 0;
